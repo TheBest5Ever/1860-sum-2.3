@@ -1,0 +1,12 @@
+Push argument 0
+Push argument 1
+Or
+Pop local 0
+Push argument 0
+Push argument 1
+And
+Not 
+Push local 0
+And
+Pop argument 2
+Push argument 2

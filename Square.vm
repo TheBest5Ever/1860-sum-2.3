@@ -1,0 +1,24 @@
+Push argument 0
+Pop local 0
+Push local 0 
+Push constant 0
+Eq 
+LOOP
+Push local 0 
+Push constant 1
+Sub 
+Push constant 0
+Eq
+If go-to END
+Push argument 0
+Pop Temp 0
+Push argument 0 
+Push temp 0
+Add
+Push local 0
+Push constant 1
+Sub
+Pop local 0 
+Go to LOOP
+END
+
