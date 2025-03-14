@@ -2,12 +2,11 @@
 push argument 0
 pop local 0
 
-// Initialize local 1 to 0 (sum accumulator)
 push constant 0
 pop local 1
 
-// Start of loop
-(LOOP)
+
+label LOOP
 push local 0          
 push constant 0       
 eq                    
@@ -28,5 +27,5 @@ pop local 0
 
 goto LOOP
 
-(END)
+label END
 push local 1
