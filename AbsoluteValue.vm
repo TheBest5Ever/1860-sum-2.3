@@ -1,23 +1,23 @@
-Push argument 0 
-Push constant 0
-Dup 
-Pop argument 2
-Pop argument 3
-Push constant 0
-Lt
-If go-to NEGATIVE
-Push argument 0
-Push constant 32768
-Eq
-If go-to OVERFLOW
-Push argument 0
-Pop argument 1
-NEGATIVE
-Push constant 1
-Pop argument 2
-Push argument 0
-Neg
-Pop argument 1
-OVERFLOW 
-Push constant 1 
-Pop argument 3 
+push argument 0 
+push constant 0
+dup 
+pop argument 2
+pop argument 3
+push constant 0
+lt
+if-goto NEGATIVE
+push argument 0
+push constant -32768
+eq
+if-goto OVERFLOW
+push argument 0
+pop argument 1
+label NEGATIVE
+push constant 1
+pop argument 2
+push argument 0
+neg
+pop argument 1
+label OVERFLOW 
+push constant 1 
+pop argument 3

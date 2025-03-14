@@ -1,12 +1,12 @@
 Push argument 0
 Push argument 1
-Or
+or
 Pop local 0
 Push argument 0
 Push argument 1
-And
-Not 
+and
+not 
 Push local 0
-And
+and
 Pop argument 2
 Push argument 2
