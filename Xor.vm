@@ -1,12 +1,10 @@
-Push argument 0
-Push argument 1
+push argument 0
+push argument 1
 or
-Pop local 0
-Push argument 0
-Push argument 1
+push argument 0
+push argument 1
 and
-not 
-Push local 0
+not
 and
-Pop argument 2
-Push argument 2
+pop argument 2
+push argument 2
