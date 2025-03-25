@@ -1,31 +1,47 @@
-
 push argument 0
-pop local 0
-
 push constant 0
-pop local 1
+lt
+if-goto NEGATIVE
+push argument 0
+push argument 0
+pop argument 2
+push argument 0
+pop argument 3
+
+label COUNT
+push argument 2
+pop argument 1
+
+push argument 2
+push constant 0
+eq
+if-goto endloop
 
 
-label LOOP
-push local 0          
-push constant 0       
-eq                    
-if-goto END           
-
-
-push local 0
-push local 1
-add
-pop local 1        
-
-
-push local 0
+label MULTIPLY_LOOP
+push argument 1
 push constant 1
 sub
-pop local 0       
+pop argument 1
+push argument 1
+push constant 0
+eq
+if-goto endloop
+push argument 3
+push argument 2
+add
+pop argument 3
+goto MULTIPLY_LOOP
+
+label endloop
+push argument 3
+goto endloop
 
 
-goto LOOP
-
-label END
-push local 1
+label NEGATIVE
+push argument 0
+neg
+pop argument 2
+push argument 2
+pop argument 3
+goto COUNT
